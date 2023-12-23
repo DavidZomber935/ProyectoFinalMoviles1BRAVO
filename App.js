@@ -1,14 +1,10 @@
-import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { Carrito, Productos } from "./screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo } from "@expo/vector-icons";
-import { Text, View } from "react-native";
-import { Carrito, Productos, Inicio, Login, Registro } from "./screens";
 
-const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
 const screenOptions = {
   tabBarShowLabel: false,
   headerShown: false,
@@ -19,60 +15,67 @@ const screenOptions = {
     left: 0,
     elevation: 0,
     height: 60,
-    backgroundColor: "#fff",
+    bckground: "#fff",
   },
 };
-
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen
-        name="Productos"
-        component={Productos}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center", justifyContent: "center" }}>
-              <Entypo
-                name="shop"
-                size={24}
-                color={focused ? "#000000" : "#111"}
-              />
-              <Text style={{ fontSize: 12, color: "#000000" }}>Productos</Text>
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Carrito"
-        component={Carrito}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: "center", justifyContent: "center" }}>
-              <Entypo
-                name="shopping-cart"
-                size={24}
-                color={focused ? "#000000" : "#111"}
-              />
-              <Text style={{ fontSize: 12, color: "#000000" }}>Carrito</Text>
-            </View>
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-};
-
-const App = () => {
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Inicio">
-        <Stack.Screen name="Inicio" component={Inicio} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Registro" component={Registro} />
-        <Stack.Screen name="Principal" component={TabNavigator} />
-      </Stack.Navigator>
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen
+          name="Productos"
+          component={Productos}
+          options={{
+            tabBarIcon: ({ focused }) => {
+              return (
+                <View
+                  style={{ alignItems: "center", justifyContent: "center" }}
+                >
+                  <Entypo
+                    name="shop"
+                    size={24}
+                    color={focused ? "#000000" : "#111"}
+                  />
+                  <Text style={{ fontSize: 12, color: "#000000" }}>
+                    Productos
+                  </Text>
+                </View>
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Carrito"
+          component={Carrito}
+          options={{
+            tabBarIcon: ({ focused }) => {
+              return (
+                <View
+                  style={{ alignItems: "center", justifyContent: "center" }}
+                >
+                  <Entypo
+                    name="shopping-cart"
+                    size={24}
+                    color={focused ? "#000000" : "#111"}
+                  />
+                  <Text style={{ fontSize: 12, color: "#000000" }}>
+                    Carrito
+                  </Text>
+                </View>
+              );
+            },
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
-};
+}
 
-export default App;
+const styles = StyleSheet.create({
+  vista: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
