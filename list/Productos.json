@@ -1,0 +1,26 @@
+[
+ {
+  "Id": 1,
+  "Nombre": "Dark Souls Remastered",
+  "Precio": 30,
+  "Imagen": "https://sm.ign.com/t/ign_latam/screenshot/d/dark-souls/dark-souls-1-game-cover_wtgk.1080.jpg"
+ },
+ {
+  "Id": 2,
+  "Nombre": "Zelda Breath Of The Wild",
+  "Precio": 60,
+  "Imagen": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+ },
+ {
+  "Id": 3,
+  "Nombre": "Call Of Duty Black Ops 3",
+  "Precio": 50,
+  "Imagen": "https://m.media-amazon.com/images/M/MV5BNWMwYmE3NmMtZjFlYS00Y2M0LTljOTEtY2NhNGQ3Y2E1MWQyXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg"
+ },
+ {
+  "Id": 4,
+  "Nombre": "Undertale",
+  "Precio": 20,
+  "Imagen": "https://pm1.aminoapps.com/6954/64d3ea12e763dd504aa40deff37bdf1e98aa94b8r1-1450-2048v2_uhq.jpg"
+ }
+]

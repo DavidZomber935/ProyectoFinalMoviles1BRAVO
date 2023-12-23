@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "706891647910",
+    "project_id": "base-de-datos-app-4d68f",
+    "storage_bucket": "base-de-datos-app-4d68f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706891647910:android:87275e873843d67e155d67",
+        "android_client_info": {
+          "package_name": "com.appDavid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0oJScGISzOPUbxpBUph50Mb3w0m0fZDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
